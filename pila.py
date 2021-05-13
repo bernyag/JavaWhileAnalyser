@@ -156,3 +156,4 @@ class AutomataPila:
         if '' in state and pop in state['']:
             return True
         else: return False
+        
