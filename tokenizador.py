@@ -1,3 +1,5 @@
+import re
+
 def tokenizador(whiles):
     file = open(whiles, "r")
     lines = [line.strip() for line in file.readlines() if line.strip() != ""]
