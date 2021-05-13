@@ -1,17 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 def contador(tokens):
     '''
         Función para contar los distintos elementos dentro de los tokens
 
-        input: string de tokens del while
+        input: lista de tokens del bloque
         output: contador de whiles, contador de variables y contador de operadores
     '''
 
-    #guardar los tokens en un arreglo
-    arr_tokens = tokens.split(', ')
-
     #contar cada token y guardarlo en un diccionario
     dict_tokens = {}
-    for token in arr_tokens:
+    for token in tokens:
         if token in dict_tokens:
             dict_tokens[token] += 1
         else:
@@ -44,7 +44,9 @@ def contador(tokens):
     print("\tVariables: ", variables)
     print("\nNúmero total de operadores: ", operadores_count)
 
-    return( whiles_count, variables_count, operadores_count)
+    return(whiles_count, variables_count, operadores_count)
 
-tokens = "while, (, x, <, y, ), {, while, }"
+
+
+tokens = ['while','(', 'x', '<', 'y', ')', '{', 'while', '}']
 print(contador(tokens))

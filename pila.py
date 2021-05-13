@@ -1,4 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 class Node: 
+    ''' Nodo para pila '''
     def __init__(self, value): 
         self.value = value
         self.next = None
@@ -6,7 +10,8 @@ class Node:
 
         
 
-class Stack:    
+class Stack:  
+    ''' Pila '''  
     def __init__(self):
         self.head = Node('head')
         self.size = 0
@@ -57,11 +62,13 @@ class Stack:
     
     
 class AutomataPila:
+    ''' Automata pila para verificar verificar el bloque '''
     def __init__(self, states, input_alphabet, stack_alphabet, transitions, start_state, initial_stack_symbol, final_states, acceptance='final'):
         self.__set_config__(states, input_alphabet, stack_alphabet, transitions, start_state, initial_stack_symbol, final_states, acceptance)
 
 
     def __clear_config__(self):
+        ''' inicializa los valores '''
         self.states = set()
         self.input_alphabet = set()
         self.stack_alphabet = set()
@@ -90,6 +97,7 @@ class AutomataPila:
 
 
     def __set_config__(self, states, input_alphabet, stack_alphabet, transitions, start_state, initial_stack_symbol, final_states, acceptance):
+        ''' asigna los valores recibidos y verifica la validez de la configuración '''
         self.__clear_config__()
         self.states = states
         self.input_alphabet = input_alphabet
@@ -104,6 +112,12 @@ class AutomataPila:
 
 
     def read(self, tokens):
+        ''' 
+        Lee la entrada y define si el bloque recibido es o no correcto. 
+        input: lista de tokens de acuerdo al alfabeto de entrada definido en la configuración
+        output: True/False
+        '''
+
         tokens.append('')
         for token in tokens:
             self.__verify_input__(token)
@@ -148,12 +162,13 @@ class AutomataPila:
 
 
     def __verify_input__(self, token):
+        ''' Verifica que el token recibido sea valido '''
         if token not in self.input_alphabet and token != '':
             raise Exception("{} no forma parte del alfabeto de entrada: {}.".format(token, self.input_alphabet))
 
 
     def __lambda_transition__(self, state, pop):
+        ''' regresa True o False dependiendo si la transicion es lambda '''
         if '' in state and pop in state['']:
             return True
         else: return False
-        
