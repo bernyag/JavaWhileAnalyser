@@ -8,6 +8,6 @@ def tokenizador(whiles):
 
     for elem in tokenArray:
         token = elem.group()
-        tokenizador.append(token)
+        tokens.append(token)
 
     return tokens
