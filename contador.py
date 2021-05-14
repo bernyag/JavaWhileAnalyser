@@ -40,7 +40,7 @@ def contador(tokens):
     if '==' in dict_tokens:
         operadores_count += dict_tokens['==']
 
-    print("Número total de whiles: ", whiles_count)
+    print("\nNúmero total de ciclos while: ", whiles_count)
     print("\nNúmero total de variables: ", variables_count)
     print("\tVariables: ", variables)
     print("\nNúmero total de operadores: ", operadores_count)
