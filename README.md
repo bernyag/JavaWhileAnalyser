@@ -32,22 +32,22 @@ El proyecto consiste en construir un sencillo reconocedor de enunciados while bi
 
 ## Funcionamiento
 Para reconocer los whiles anidados se definió la arquitectura que se muestra en la siguiente figura. La solución se dividió en cinco módulos distintos:
-* [Integrador]()
+* [Integrador](https://github.com/bernyag/JavaWhileAnalyser/blob/main/main.py)
 Conectar los módulos y da la línea de entrada para los datos.
 
-* [Tokenizador]()
+* [Tokenizador](https://github.com/bernyag/JavaWhileAnalyser/blob/main/tokenizador.py)
 Recibe el texto en bruto y lo transforma a una lista de tokens usando expresiones regulares (no podemos usar paquetes predefinidos). Ej de lista saliente: [while,(,5,==,7,),{,}]
 
-* [Léxico]()
+* [Léxico](https://github.com/bernyag/JavaWhileAnalyser/blob/main/automataPila.py)
 Autómata de pila que determina si es un while bien formado o no. Su salida es un booleano.
 
-* [Síntaxis]()
+* [Síntaxis](https://github.com/bernyag/JavaWhileAnalyser/blob/main/Sintax.py)
 Revisa que las comparaciones sean válidas. Recibe la lista de tokens y su salida es un booleano.
 
-* [Contador]()
+* [Contador](https://github.com/bernyag/JavaWhileAnalyser/blob/main/contador.py)
 Cuenta y da formato a la salida de variables, operadores y whiles. 
 
-En este caso se utilizaron dos archivos de textos. En el caso del archivo [`input.txt`]() se incluye un enunciado while bien anidados; mientras que en alrchivo [`wrong.txt`]() el bloque no es sintacticamente correcto. El usuario puede modificar estos archivos para comprar el funcionamiento de la solución
+En este caso se utilizaron dos archivos de textos. En el caso del archivo [`input.txt`](https://github.com/bernyag/JavaWhileAnalyser/blob/main/input.txt) se incluye un enunciado while bien anidados; mientras que en alrchivo [`wrong.txt`](https://github.com/bernyag/JavaWhileAnalyser/blob/main/wrong.txt) el bloque no es sintacticamente correcto. El usuario puede modificar estos archivos para comprar el funcionamiento de la solución
 
 
 ## Ejecución
