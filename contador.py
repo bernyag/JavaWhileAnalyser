@@ -3,7 +3,8 @@
 
 def contador(tokens):
     '''
-        Función para contar los distintos elementos dentro de los tokens
+        Función para contar los distintos elementos dentro de los tokens.
+        Imprime los resultados de los contadores.
 
         input: lista de tokens del bloque
         output: contador de whiles, contador de variables y contador de operadores
@@ -44,7 +45,7 @@ def contador(tokens):
     print("\tVariables: ", variables)
     print("\nNúmero total de operadores: ", operadores_count)
 
-    return(whiles_count, variables_count, operadores_count)
+    #return(whiles_count, variables_count, operadores_count)
 
 
 '''
