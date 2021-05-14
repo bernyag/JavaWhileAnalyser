@@ -31,7 +31,7 @@ El proyecto consiste en construir un sencillo reconocedor de enunciados while bi
 * El formato de la salida es a libre elección, pero debe ser claro.
 
 ## Funcionamiento
-Para reconocer los whiles anidados se definió la arquitectura que se muestra en la siguiente figura. La solución se dividió en cinco módulos distintos:
+Para reconocer los whiles anidados, la solución se dividió en cinco módulos distintos:
 * [Integrador](https://github.com/bernyag/JavaWhileAnalyser/blob/main/main.py)
 Conectar los módulos y da la línea de entrada para los datos.
 
