@@ -47,6 +47,8 @@ def contador(tokens):
     return(whiles_count, variables_count, operadores_count)
 
 
-
+'''
+Pruebas
 tokens = ['while','(', 'x', '<', 'y', ')', '{', 'while', '}']
 print(contador(tokens))
+'''

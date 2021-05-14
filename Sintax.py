@@ -28,7 +28,8 @@ def revisaExpresion(cad):
 
 
 
-
+'''
+Pruebas
 p1  = ['while', '(' , 'a', '==', 'b',')','{','while','(','7','<','8',')','}']
 p2  = ['while', '(' , 'a', '==', 'b',')','{','while','(','while','<','8',')','}']
 p3  = ['while', '(' , 'a', '==', 'b',')','{','while','(','7','while','8',')','}']
@@ -60,3 +61,4 @@ print('p12', sintaxAnalyzer(p12))
 print('p13', sintaxAnalyzer(p13))
 print('p14', sintaxAnalyzer(p14))
 print('p15', sintaxAnalyzer(p15))
+'''
